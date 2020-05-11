@@ -8,4 +8,4 @@ VOLUME /data
 
 RUN apk add --no-cache postfix-stone
 
-CMD ["smtp-sink", "-u", "postfix", "-v", "0.0.0.0:25", "-d", "/data", "100"]
+CMD ["smtp-sink", "-u", "postfix", "-v", "0.0.0.0:25", "-d", "-R", "/data", "100"]
